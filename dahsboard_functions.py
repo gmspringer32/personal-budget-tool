@@ -66,7 +66,7 @@ class DashboardCreator:
         selected_month_df_spending = self.df.loc[(self.df['date'].dt.month == month_num) & (self.df['amount'] <= 0) & (self.df['category'] != "Credit Card Payment") & (self.df['category'] != "Transfer")]
         selected_month_df_spending['amount'] = selected_month_df_spending['amount'] * -1
 
-        self.budget_df = pd.read_csv('budget.csv', index_col=0)
+        self.budget_df = pd.read_csv('budgets/budget.csv', index_col=0)
 
         spending_budget = pd.concat([selected_month_df_spending, self.budget_df])
 
@@ -163,12 +163,12 @@ class BudgetTool:
         budget_df = col1.data_editor(budget_df,disabled=budget_df['category'], hide_index=True, use_container_width=True)
 
         if col1.button("Save", key = 'save_income'):
-            budget_df.to_csv("budget.csv")
+            budget_df.to_csv("budgets/budget.csv")
 
         self.income_budget_df = budget_df
 
     def __find_income_budget_df__(self, income = False):
-        if not os.path.exists('income_budget.csv'):
+        if not os.path.exists('budgets/income_budget.csv'):
             if 'income_budget_df' not in st.session_state:
                 st.session_state.income_budget_df = pd.DataFrame(columns=['category', 'budget'])
 
@@ -176,10 +176,10 @@ class BudgetTool:
 
             budget_df['category'] = self.df[self.df['category'] == 'Income']['subcategory'].unique()
             budget_df['budget'] = 0
-            budget_df.to_csv('income_budget.csv')
+            budget_df.to_csv('budgets/income_budget.csv')
         else:
             if 'budget_df' not in st.session_state:
-                st.session_state.income_budget_df = pd.read_csv("income_budget.csv", index_col=0)
+                st.session_state.income_budget_df = pd.read_csv("budgets/income_budget.csv", index_col=0)
 
     
 
@@ -194,12 +194,12 @@ class BudgetTool:
         budget_df = col2.data_editor(budget_df,disabled=budget_df['category'], hide_index=True, use_container_width=True)
 
         if col2.button("Save", key = 'save_expenses'):
-            budget_df.to_csv("budget.csv")
+            budget_df.to_csv("budgets/budget.csv")
 
         self.budget_df = budget_df
 
     def __find_spending_budget__(self):
-        if not os.path.exists('budget.csv'):
+        if not os.path.exists('budgets/budget.csv'):
             if 'budget_df' not in st.session_state:
                 st.session_state.budget_df = pd.DataFrame(columns=['category', 'budget'])
 
@@ -207,8 +207,8 @@ class BudgetTool:
 
             budget_df['category'] = self.df['category'].unique()
             budget_df['budget'] = 0
-            budget_df.to_csv('budget.csv')
+            budget_df.to_csv('budgets/budget.csv')
         else:
             if 'budget_df' not in st.session_state:
-                st.session_state.budget_df = pd.read_csv("budget.csv", index_col=0)
+                st.session_state.budget_df = pd.read_csv("budgets/budget.csv", index_col=0)
 
