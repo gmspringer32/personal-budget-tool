@@ -1,10 +1,11 @@
 store_categories = {
+    'BYU DES:MFC eCheck': 'Other',
     'TARGET': 'Shopping',
     'WM SUPERCENTER': 'Groceries',
     'Deseret Book': 'Books Music',
     'SMITHS FOOD': 'Groceries',
     'SMITHS FUEL': 'Gas',
-    '7 ELEVEN': 'Convenience Store',
+    '7 ELEVEN': 'Gas',
     'MAVERIK': 'Gas',
     'SQ THE NUT FATHER': 'Food Snacks',
     'SHELL OIL': 'Gas',
@@ -53,7 +54,8 @@ store_categories = {
     'QuestarGas' : 'Utilities-Gas',
     'UTAH FIRST CU' : 'Car Payment',
     'BRIGHAM YOUNG UN DES:DIR DEP' : 'TA',
-    'VENMO DES' : 'Venmo Deposit',
+    'VENMO DES:CASHOUT' : 'Venmo Deposit',
+    'VENMO DES:PAYMENT' : 'Venmo Payment',
     'Ch JesusChrist DES:DONATION' : 'Tithing',
     'GUSTO DES:PAY' : 'MarketDial',
     'BYU VENDING' : 'Food Snacks',
@@ -78,6 +80,19 @@ store_categories = {
     'Online payment from CHK' : 'Credit Card Payment',
     'USU MOBILESTUDENTEVENT goo.gl/gVdePhU' : 'Entertainment',
     'The Cleaning Solution' : 'Laundry',
-    'Millies American Ki' : 'Restraunt Food'
+    'Millies American Ki' : 'Restraunt Food',
+    'Bank of America Credit Card Bill Payment' : "Credit Card Payment",
+    'JIFFY LUBE': "Car",
 
+}
+
+overall_categories = {
+    'Food': 'Food',
+    'Utilities': 'Utilities',
+    'Convenience Store' : 'Food',
+    'Books Music': 'Shopping',
+    'Shopping': 'Shopping',
+    'TA' : 'Income',
+    'MarketDial' : 'Income',
+    'Venmo Deposit' : 'Income',
 }
