@@ -2,15 +2,11 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import plotly.express as px
-import seaborn as sns
-import matplotlib.pyplot as plt
 import os
 import io
-from datetime import datetime, timedelta
-import calendar
 
 from dahsboard_functions import DashboardCreator
-from helper_functions import clean_credit_card, create_file, create_big_df, clean_checking, add_category_column, month_name_to_number, clean_amounts
+from scraper.helper_functions import clean_credit_card, create_file, create_big_df, clean_checking, add_category_column, clean_amounts
 
 
 def main():
@@ -30,7 +26,7 @@ def get_df_ready():
 
     if uploaded_file is not None:
         st.info("File uploaded successfully!")
-        
+
         file_contents = uploaded_file.read()
 
         # Use io.BytesIO to create a virtual file-like object

@@ -3,7 +3,7 @@ import os
 from datetime import datetime, timedelta
 import calendar
 
-from categories import store_categories, overall_categories
+from scraper.categories import store_categories, overall_categories
 
 def clean_checking(df):
     df['date'] = pd.to_datetime(df['Date'])

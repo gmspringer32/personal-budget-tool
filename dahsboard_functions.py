@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
-from categories import store_categories
-from helper_functions import month_name_to_number, add_category_column
+from scraper.helper_functions import month_name_to_number
 
 class DashboardCreator:
     def __init__(self, df):
