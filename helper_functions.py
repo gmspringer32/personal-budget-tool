@@ -41,6 +41,8 @@ def create_big_df():
         df1 = pd.read_csv("transactions/"+ file_name)
         df = pd.concat([df, df1])
     df = df.dropna(axis=0)
+    df = df.drop_duplicates()
+    # df.to_csv('transactions/all.csv')
 
     return df
 

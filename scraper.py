@@ -11,15 +11,15 @@ from cleaner import Cleaner
 
 class BankScraper:
     def __init__(self):
-        with open("bankurl.txt") as file:
+        with open("secure/bankurl.txt") as file:
             self.url = file.read()
         self.driver = None
         self.credit_card_df = pd.DataFrame()
         self.checking_df = pd.DataFrame()
         self.accounts_df = pd.DataFrame()
-        with open("creditcardaccount") as file:
+        with open("secure/creditcardaccount") as file:
             self.credit_card_account = file.read()
-        with open("bankaccount") as file:
+        with open("secure/bankaccount") as file:
             self.bank_account = file.read()
         
 

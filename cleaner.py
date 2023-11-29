@@ -20,6 +20,7 @@ class Cleaner:
         self.__addCategoryColumn__()
         self.__combineDfs__()
         self.__sortDates__()
+        self.accounts_df.drop(columns=['balance'], inplace=True)
         self.accounts_df.reset_index(drop=True, inplace=True)
 
 

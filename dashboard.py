@@ -30,7 +30,7 @@ def get_df_ready():
 
     if uploaded_file is not None:
         st.info("File uploaded successfully!")
-
+        
         file_contents = uploaded_file.read()
 
         # Use io.BytesIO to create a virtual file-like object
@@ -57,10 +57,7 @@ def get_df_ready():
 
 def __dashboard__(df):
     dahsboard = DashboardCreator(df)
-    dahsboard.select_month_button()
     dahsboard.create_dashboard()
-    dahsboard.month_earnings_tool()
-    dahsboard.month_spending_tool()
 
 if __name__ == "__main__":
     main()
