@@ -1,0 +1,10 @@
+pandas
+seaborn
+calendar
+matplotlib
+os
+streamlit
+io
+datetime
+selenium
+time

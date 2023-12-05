@@ -4,7 +4,6 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time
-import datetime
 from selenium.webdriver.chrome.options import Options
 
 from cleaner import Cleaner

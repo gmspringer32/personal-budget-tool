@@ -171,7 +171,7 @@ class IncomeTool:
         fig, ax = plt.subplots(figsize = (8,3))
         palette = sns.color_palette("Blues_d")
         custom_palette = ["#3f668f","#92b3e8"]
-
+        plt.style.use("dark_background")
         # Use your custom palette in a Seaborn plot
         sns.set_palette(custom_palette)
         palette.reverse()
