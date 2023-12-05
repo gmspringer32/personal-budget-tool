@@ -1,9 +1,5 @@
 pandas
 seaborn
 matplotlib
-os
 streamlit
-io
-datetime
 selenium
-time
