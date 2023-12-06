@@ -18,11 +18,10 @@ def get_df_ready():
 
     uploaded_file = st.file_uploader("Upload a new Statement", type=["csv"])
 
-    if not os.path.exists('transactions'):
-        os.makedirs('transactions')
-
-
     if uploaded_file is not None:
+        if not os.path.exists('transactions'):
+            os.makedirs('transactions')
+
         st.info("File uploaded successfully!")
 
         file_contents = uploaded_file.read()
@@ -39,6 +38,9 @@ def get_df_ready():
             df = clean_credit_card(df)
 
         create_file(df)
+
+    elif not os.path.exists('transactions'):
+        df = pd.read_csv('dummy_data.csv')
 
     df = create_big_df()
     df = clean_amounts(df)

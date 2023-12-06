@@ -4,6 +4,7 @@ import calendar
 import matplotlib.pyplot as plt 
 import pandas as pd
 import os
+from datetime import datetime
 
 from scraper.helper_functions import month_name_to_number
 
@@ -24,6 +25,9 @@ class DashboardCreator:
 
         spending_tool = SpendingTool(self.selected_month, self.df)
         spending_tool.month_spending_tool()
+
+        month_to_month_tool = MonthToMonthTool(self.df)
+        month_to_month_tool.run_month_to_month()
 
     def select_month_button(self):
         return st.selectbox('Select a month', [calendar.month_name[month] for month in self.df['date'].dt.month.unique()], key='month')
@@ -182,8 +186,13 @@ class IncomeTool:
                      order=cat_order,
                      estimator='sum',
                      ci = False,
-                     palette=custom_palette
-                     )
+                     palette=custom_palette,
+                    width=.7
+                    )
+        plt.xlim(left = 0, right = earnings_budget_long['value'].max() + 1000)
+        for i in ax.containers:
+            ax.bar_label(i,fontsize = 10,padding = 1)
+        plt.legend(loc='lower right')
         
         return fig
     
@@ -224,7 +233,7 @@ class SpendingTool:
         category_order = df_group.loc[(df_group['amount'] > 0)].sort_values(by = 'amount', ascending=False)['category']
     
         plt.style.use("dark_background")
-        fig, ax = plt.subplots(figsize = (8,len(category_order)-4))
+        fig, ax = plt.subplots(figsize = (8,len(category_order)-3))
         plt.tight_layout()
         sns.barplot(
                     x='value', 
@@ -236,6 +245,7 @@ class SpendingTool:
                     order=category_order,
                     width=.7
                     )
+        plt.xlim(left = 0, right = df_long['value'].max() + 200)
         for i in ax.containers:
             ax.bar_label(i,fontsize = 10,padding = 1)
         plt.legend(loc='lower right')
@@ -265,3 +275,73 @@ class SpendingTool:
 
 
         self.col1.table(styled_df)
+
+    
+
+class MonthToMonthTool:
+    def __init__(self, df):
+        self.df = df
+
+    def run_month_to_month(self):
+        st.header('Month To Month')
+        self.__month_to_month_earning_spending()
+        self.__month_to_month_cat_spending__()
+
+    def __month_to_month_earning_spending(self):
+        df = self.df
+        df_months = df
+        df_months['month'] = df['date'].dt.month
+        df_months_spending = df_months.loc[(~df_months['subcategory'].isin(['Transfer', 'Credit Card Payment'])) & (df_months['amount'] < 0)]
+        df_by_month_spending = df_months_spending.groupby(['month'])['amount'].sum().reset_index()
+        df_by_month_spending['amount'] = df_by_month_spending['amount'] * -1
+        df_by_month_spending['type'] = 'Spending'
+
+        df_months_earnings = df_months.loc[df_months['category'] == 'Income']
+        df_by_month_earnings = df_months_earnings.groupby(['month'])['amount'].sum().reset_index()
+        df_by_month_earnings['type'] = 'Earning'
+        df_by_month = pd.concat([df_by_month_earnings, df_by_month_spending])
+
+        current_month = datetime.now().month
+        month_order = [(current_month + i) % 12 + 1 for i in range(12)]
+        df_by_month['month'] = pd.Categorical(df_by_month['month'], categories=month_order, ordered=True)
+
+        fig, ax = plt.subplots(figsize = (14, 3))
+        sns.barplot(df_by_month, 
+                    x = 'month', 
+                    y = 'amount',
+                    hue = 'type',
+                    palette=["#3f668f","#92b3e8"], 
+                    width=.7)
+        ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
+        plt.ylim(bottom = 0, top= df_by_month['amount'].max()+700)
+        for i in ax.containers:
+            ax.bar_label(i,fontsize = 10,padding = 1)
+        st.pyplot(fig)
+
+    def __month_to_month_cat_spending__(self):
+        df = self.df
+        df_months = df
+        df_months['month'] = df['date'].dt.month
+        df_months_spending = df_months.loc[(~df_months['subcategory'].isin(['Transfer', 'Credit Card Payment'])) & (df_months['amount'] < 0)]
+        df_months_spending['amount'] = df_months_spending['amount'] * -1
+        cat = st.selectbox("Select Category", df_months_spending['category'].sort_values().unique())
+        selected_cat_df = df_months_spending.loc[df_months_spending['category'] == cat].drop(['description', 'account', 'date', 'subcategory'], axis = 1).drop_duplicates()
+
+        selected_cat_df = selected_cat_df.groupby(['month'])['amount'].sum().reset_index()
+
+        current_month = datetime.now().month
+        month_order = [(current_month + i) % 12 + 1 for i in range(12)]
+        selected_cat_df['month'] = pd.Categorical(selected_cat_df['month'], categories=month_order, ordered=True)
+
+        fig, ax = plt.subplots(figsize = (14, 3))
+        sns.barplot(selected_cat_df, 
+                    x = 'month', 
+                    y = 'amount',
+                    palette=["#3f668f","#92b3e8"], 
+                    width=.7,
+                    estimator=sum,
+                    ci=None)
+        plt.ylim(bottom = 0, top= selected_cat_df['amount'].max()+100)
+        for i in ax.containers:
+            ax.bar_label(i,fontsize = 10,padding = 1)
+        st.pyplot(fig)
