@@ -18,7 +18,15 @@ def get_df_ready():
 
     uploaded_file = st.file_uploader("Upload a new Statement", type=["csv"])
 
-    if uploaded_file is not None:
+    
+    if not os.path.exists('transactions'):
+        df = pd.read_csv('dummy_data.csv', index_col=0)
+        df = add_category_column(df)
+        df.sort_values(by = ['date'], inplace=True, ascending=False)
+        df.reset_index(drop = True, inplace=True)
+
+
+    elif uploaded_file is not None:
         if not os.path.exists('transactions'):
             os.makedirs('transactions')
 
@@ -38,15 +46,19 @@ def get_df_ready():
             df = clean_credit_card(df)
 
         create_file(df)
+        df = create_big_df()
+        df = clean_amounts(df)
+        df = add_category_column(df)
+        df.sort_values(by = ['date'], inplace=True, ascending=False)
+        df.reset_index(drop = True, inplace=True)
 
-    elif not os.path.exists('transactions'):
-        df = pd.read_csv('dummy_data.csv')
-
-    df = create_big_df()
-    df = clean_amounts(df)
-    df = add_category_column(df)
-    df.sort_values(by = ['date'], inplace=True, ascending=False)
-    df.reset_index(drop = True, inplace=True)
+    elif uploaded_file is None:
+        df = create_big_df()
+        df = clean_amounts(df)
+        df = add_category_column(df)
+        df.sort_values(by = ['date'], inplace=True, ascending=False)
+        df.reset_index(drop = True, inplace=True)
+    
     
     df['date'] = pd.to_datetime(df['date'])
     return df

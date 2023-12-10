@@ -171,7 +171,7 @@ class IncomeTool:
         earnings_budget = pd.concat([month_earnings_copy, self.budget])
         earnings_budget_group = earnings_budget.groupby('category')[['amount', 'budget']].sum().reset_index()
         earnings_budget_long = earnings_budget_group.melt(id_vars='category')
-        
+
         fig, ax = plt.subplots(figsize = (8,3))
         palette = sns.color_palette("Blues_d")
         custom_palette = ["#3f668f","#92b3e8"]

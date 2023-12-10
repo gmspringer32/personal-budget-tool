@@ -83,6 +83,7 @@ store_categories = {
     'Millies American Ki' : 'Restraunt Food',
     'Bank of America Credit Card Bill Payment' : "Credit Card Payment",
     'JIFFY LUBE': "Car",
+    'Job':'Job',
 
 }
 
@@ -95,4 +96,5 @@ overall_categories = {
     'TA' : 'Income',
     'MarketDial' : 'Income',
     'Venmo Deposit' : 'Income',
+    'Job' : 'Income'
 }

@@ -1,62 +1,62 @@
-,date,description,category,amount,account,balance
-60,2023-10-31,WM SUPERCENTER,Groceries,66.36,Credit Card,2371.58
-59,2023-10-30,LAZ PKG,Parking,4.77,Credit Card,2305.22
-58,2023-10-29,UTAH FIRST CU,Car Payment,15.78,Credit Card,2300.45
-57,2023-10-28,UTAH DMV OFFICES,Car,0.8,Credit Card,2284.67
-56,2023-10-27,SALT & STRAW ICE CREA,Food - Desserts,45.14,Credit Card,2283.87
-55,2023-10-26,7 ELEVEN,Convenience Store,192.39,Credit Card,2238.73
-54,2023-10-25,STRANGLING BROTHERS CIRC,Entertainment,8.05,Credit Card,2046.34
-53,2023-10-24,SQ THE NUT FATHER,Food Snacks,34.98,Credit Card,2038.29
-52,2023-10-23,PROVO CITY UTILI DES,Utilities,122.85,Credit Card,2003.31
-51,2023-10-22,Check,Rent,25.85,Credit Card,1880.46
-50,2023-10-21,SQ THE NUT FATHER,Food Snacks,6.86,Credit Card,1854.61
-49,2023-10-20,Ch JesusChrist DES:DONATION,Tithing,23.95,Credit Card,1847.75
-48,2023-10-19,CHICK FIL A,Fast Food,10.52,Credit Card,1823.8
-47,2023-10-18,CHOICES,Fast Food,0.48,Credit Card,1813.28
-46,2023-10-17,SQ BROOKERS FOUNDING FL,Food Snacks,7.74,Credit Card,1812.8
-45,2023-10-16,VENMO DES,Venmo Deposit,10.35,Credit Card,1805.06
-44,2023-10-15,BRIGHAM YOUNG UN DES:DIR DEP,TA,7.94,Credit Card,1794.71
-43,2023-10-14,ALLIANZ TRAVEL INS,Insurance,10.88,Credit Card,1786.77
-42,2023-10-13,CAFE ZUPAS,Fast Food,112.66,Credit Card,1775.89
-41,2023-10-12,PROVO CITY UTILI DES,Utilities,3.05,Credit Card,1663.23
-40,2023-10-11,CAFE ZUPAS,Fast Food,1.86,Credit Card,1660.18
-39,2023-10-10,QuestarGas,Utilities-Gas,46.67,Credit Card,1658.32
-38,2023-10-09,TACO BELL,Fast Food,106.75,Credit Card,1611.65
-37,2023-10-08,TACO BELL,Fast Food,0.43,Credit Card,1504.9
-36,2023-10-07,THE HOME DEPOT,Home Improvement,15.92,Credit Card,1504.47
-35,2023-10-06,SLC AIRPORT PARKING,Transportation,124.68,Credit Card,1488.55
-34,2023-10-05,TARGET,Shopping,116.35,Credit Card,1363.87
-33,2023-10-04,Ch JesusChrist DES:DONATION,Tithing,0.03,Credit Card,1247.52
-32,2023-10-03,MAVERIK,Gas,1.09,Credit Card,1247.49
-31,2023-10-02,CAFE RIO,Fast Food,147.82,Credit Card,1246.4
-30,2023-10-01,MCDONALD'S,Fast Food,9.48,Credit Card,1098.58
-29,2023-09-30,Ch JesusChrist DES:DONATION,Tithing,0.65,Credit Card,1089.1
-28,2023-09-29,CMSVENDT B VENDING,Food Snacks,11.72,Credit Card,1088.45
-27,2023-09-28,CAFE ZUPAS,Fast Food,27.67,Credit Card,1076.73
-26,2023-09-27,GUSTO DES:PAY,MarketDial,11.27,Credit Card,1049.06
-25,2023-09-26,THE HOME DEPOT,Home Improvement,12.49,Credit Card,1037.79
-24,2023-09-25,STARBUCKS STORE,Fast Food,1.74,Credit Card,1025.3
-23,2023-09-24,TST Millies American Ki,Food Snacks,79.21,Credit Card,1023.56
-22,2023-09-23,AIR STOP,Transportation,182.25,Credit Card,944.35
-21,2023-09-22,DAIRY QUEEN,Fast Food,84.92,Credit Card,762.1
-20,2023-09-21,Online Banking payment to CRD,Credit Card Payment,96.26,Credit Card,677.18
-19,2023-09-20,MTC VENDING PROVO,Food Snacks,99.37,Credit Card,580.92
-18,2023-09-19,FANDANGO,Entertainment,106.71,Credit Card,481.55
-17,2023-09-18,SLC AIRPORT PARKING,Transportation,3.59,Credit Card,374.84
-16,2023-09-17,Millies American Ki,Restraunt Food,3.13,Credit Card,371.25
-15,2023-09-16,IN N OUT,Fast Food,8.77,Credit Card,368.12
-14,2023-09-15,SQ BROOKERS FOUNDING FL,Food Snacks,3.81,Credit Card,359.35
-13,2023-09-14,QuestarGas,Utilities-Gas,7.52,Credit Card,355.54
-12,2023-09-13,ARCO,Gas,8.66,Credit Card,348.02
-11,2023-09-12,CHICK FIL A,Fast Food,5.78,Credit Card,339.36
-10,2023-09-11,SQ THE NUT FATHER,Food Snacks,0.75,Credit Card,333.58
-9,2023-09-10,THE RANCH HOUSE CAFE,Food Snacks,36.14,Credit Card,332.83
-8,2023-09-09,SCERA,Entertainment,1.1,Credit Card,296.69
-7,2023-09-08,Online Banking payment to CRD,Credit Card Payment,11.04,Credit Card,295.59
-6,2023-09-07,Deseret Book,Books Music,18.68,Credit Card,284.55
-5,2023-09-06,PANDA EXPRESS,Fast Food,13.04,Credit Card,265.87
-4,2023-09-05,AMERICAN AIR,Airline,6.93,Credit Card,252.83
-3,2023-09-04,UTAH DMV OFFICES,Car,63.12,Credit Card,245.9
-2,2023-09-03,PROVO CITY UTILI DES,Utilities,156.54,Credit Card,182.78
-1,2023-09-02,SMITHS FUEL,Gas,24.74,Credit Card,26.24
-0,2023-09-01,BYU STORE,Shopping,1.5,Credit Card,1.5
+,date,description,category,amount,account,subcategory
+0,2023-10-31,TURO INC.,Travel,-0.67,Credit Card,Travel
+1,2023-10-29,Check,Rent,-5.53,Credit Card,Rent
+2,2023-10-28,UNITED,Airline,-16.6,Credit Card,Airline
+3,2023-10-27,CHOICES,Food,-71.17,Credit Card,Fast Food
+4,2023-10-26,UTAH TRANSIT AUTHORITY,Transportation,-1.51,Credit Card,Transportation
+5,2023-10-25,STRANGLING BROTHERS CIRC,Entertainment,-49.88,Credit Card,Entertainment
+6,2023-10-24,LAZ PKG,Parking,-9.59,Credit Card,Parking
+7,2023-10-23,CMSVENDT B VENDING,Food,-26.62,Credit Card,Food Snacks
+8,2023-10-22,Bank of America Credit Card Bill Payment,Credit Card Payment,-30.45,Credit Card,Credit Card Payment
+9,2023-10-21,SQ GETOUT GAMES,Entertainment,-20.91,Credit Card,Entertainment
+10,2023-10-20,SCERA,Entertainment,-254.34,Credit Card,Entertainment
+11,2023-10-19,LAFAYETTE RES METER PARK,Parking,-21.7,Credit Card,Parking
+12,2023-10-18,MAVERIK,Gas,-5.68,Credit Card,Gas
+13,2023-10-17,DAIRY QUEEN,Food,-62.33,Credit Card,Fast Food
+14,2023-10-16,SQ CHOM BURGER,Food,-57.24,Credit Card,Fast Food
+15,2023-10-15,ARCO,Gas,-4.85,Credit Card,Gas
+16,2023-10-14,UTAH DMV OFFICES,Car,-6.14,Credit Card,Car
+17,2023-10-13,WM SUPERCENTER,Groceries,-3.16,Credit Card,Groceries
+18,2023-10-12,BOUDIN BAKERY,Food,-23.09,Credit Card,Fast Food
+19,2023-10-11,LAFAYETTE RES METER PARK,Parking,-6.15,Credit Card,Parking
+20,2023-10-10,7 ELEVEN,Gas,-0.97,Credit Card,Gas
+21,2023-10-09,CHOICES,Food,-130.36,Credit Card,Fast Food
+22,2023-10-08,VENMO DES:PAYMENT,Venmo Payment,-109.12,Credit Card,Venmo Payment
+23,2023-10-07,SMITHS FOOD,Groceries,-10.72,Credit Card,Groceries
+24,2023-10-06,COSTA VIDA,Food,-1.63,Credit Card,Fast Food
+25,2023-10-05,TURO INC.,Travel,-20.38,Credit Card,Travel
+26,2023-10-04,BOUDIN BAKERY,Food,-35.15,Credit Card,Fast Food
+27,2023-10-03,Job,Income,1000.0,checking,Income
+28,2023-10-03,MAVERIK,Gas,-41.7,Credit Card,Gas
+29,2023-10-02,CAFE ZUPAS,Food,-78.22,Credit Card,Fast Food
+30,2023-10-01,TST Millies American Ki,Food,-98.18,Credit Card,Food Snacks
+31,2023-09-30,FANDANGO,Entertainment,-188.54,Credit Card,Entertainment
+32,2023-09-29,TST Millies American Ki,Food,-0.24,Credit Card,Food Snacks
+33,2023-09-28,JIFFY LUBE,Car,-11.26,Credit Card,Car
+34,2023-09-27,BYU VENDING,Food,-4.55,Credit Card,Food Snacks
+35,2023-09-26,CAFE RIO,Food,-40.01,Credit Card,Fast Food
+36,2023-09-25,CMSVENDT B VENDING,Food,-53.08,Credit Card,Food Snacks
+37,2023-09-24,SAINT MARYS COLLEGE,Education,-2.5,Credit Card,Education
+38,2023-09-23,VENMO DES:PAYMENT,Venmo Payment,-251.92,Credit Card,Venmo Payment
+39,2023-09-21,SAINT MARYS COLLEGE,Education,-262.87,Credit Card,Education
+40,2023-09-20,BYU VENDING,Food,-4.5,Credit Card,Food Snacks
+41,2023-09-19,Bank of America Credit Card Bill Payment,Credit Card Payment,-73.58,Credit Card,Credit Card Payment
+42,2023-09-18,SMITHS FUEL,Gas,-1.12,Credit Card,Gas
+43,2023-09-17,BUN MEE,Food,-3.45,Credit Card,Fast Food
+44,2023-09-16,Ch JesusChrist DES:DONATION,Tithing,-13.69,Credit Card,Tithing
+45,2023-09-15,BYU STORE,Shopping,-50.61,Credit Card,Shopping
+46,2023-09-14,COSTA VIDA,Food,-5.35,Credit Card,Fast Food
+47,2023-09-13,THE HOME DEPOT,Home Improvement,-1.36,Credit Card,Home Improvement
+48,2023-09-12,SQ CHOM BURGER,Food,-11.48,Credit Card,Fast Food
+49,2023-09-11,Ch JesusChrist DES:DONATION,Tithing,-8.4,Credit Card,Tithing
+50,2023-09-10,PROVO CITY UTILI DES,Utilities,-5.36,Credit Card,Utilities
+51,2023-09-09,USU MOBILESTUDENTEVENT goo.gl/gVdePhU,Entertainment,-35.68,Credit Card,Entertainment
+52,2023-09-08,BYU DES:MFC eCheck,Other,-10.33,Credit Card,Other
+53,2023-09-07,WAL MART,Groceries,-49.21,Credit Card,Groceries
+54,2023-09-06,MTC VENDING PROVO,Food,-8.19,Credit Card,Food Snacks
+55,2023-09-05,The Cleaning Solution,Laundry,-1.76,Credit Card,Laundry
+56,2023-09-04,BYU WSC COUGAR EXPRESS,Food,-8.62,Credit Card,Food Snacks
+57,2023-09-03,Job2,Income,1500.0,checking,Income
+58,2023-09-03,COSTA VIDA,Food,-0.07,Credit Card,Fast Food
+59,2023-09-02,Amazon,Shopping,-43.54,Credit Card,Shopping
+60,2023-09-01,BYU DES:MFC eCheck,Other,-34.9,Credit Card,Other
