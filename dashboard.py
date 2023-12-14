@@ -10,6 +10,14 @@ from scraper.helper_functions import clean_credit_card, create_file, create_big_
 def main():
     st.set_page_config(layout="wide")
     st.title("Budget")
+    st.write("Welcome to the Personal Budget Tracker, a user-friendly Streamlit app designed to empower you in managing your finances effectively. This intuitive tool is tailored for individuals seeking a simplified and organized approach to personal budgeting.")
+    st.write("Features:")
+    st.write("1. Budget Tool - Allows you to input budget amounts for the month")
+    st.write("2. Monthly Income - A place for you to look at income for the selected month")
+    st.write("3. Monthly Spending - A place for you to look at spending for a specific month and filter by category")
+    st.write("4. Month to Month Spending and Income - Visualization of spending and income from month to month over the year")
+    st.write("5. Month to Month Spending by Category - Where to see spending in different categories from month to month in specific categories")
+    st.write("\nnote that the default values of this dashboard come from dummy data")
     df = get_df_ready()
     __dashboard__(df)
 
