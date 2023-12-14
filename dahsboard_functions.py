@@ -52,7 +52,7 @@ class BudgetTool:
     def __budget_expander__(self):
         expander = st.expander(label="Expand Budget Tool")
         with expander:
-            st.write("To make a budget, enter the ammounts you want then press \"save\"")
+            st.write("To make a budget, enter the amounts you want then press \"save\"")
             col1, col2 = st.columns(2)
             self.__income_budget__(col1)
             self.__spending_budget__(col2)
